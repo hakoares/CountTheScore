@@ -55,10 +55,21 @@ $(function(){
             goLight();
             themeDefault = true;
           }
-
-
         }
     
+        // Change theme: 1
+      if(e.which == 49) {
+        document.getElementById('team1').innerHTML = "HOME";        
+        document.getElementById('team2').innerHTML = "AWAY";        
+        document.getElementById('background-img').style.backgroundImage = "url(img/foot.jpg)";
+        }
+
+         // Change theme: 2
+      if(e.which == 50) {
+        document.getElementById('background-img').style.backgroundImage = "url(img/gtm.jpg)";
+        document.getElementById('team1').innerHTML = "TEAM A";        
+        document.getElementById('team2').innerHTML = "TEAM 2";  
+        }
     
         // Go fullscreen
         if(e.which == 102 || e.which == 70) {
@@ -99,12 +110,6 @@ $(function(){
         document.getElementById('help-alert').style.display = "block";
           
       }
-
-      // Background img for GTM
-      $('#gtm').click(function(){
-        document.getElementById('background-img').style.backgroundImage = "url(img/gtm.jpg)";        
-
-      });
 
       // Show/hide the mouse
       $(document).mousemove(function(){

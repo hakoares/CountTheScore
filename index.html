@@ -20,7 +20,6 @@
                                 Press H for help.
                                 <hr>
                                 <strong>Choose background image</strong> 
-                                <button type="button" id="gtm" class="btn-small ml-3 mr-3 btn-gray ">Grab the mic</button>
                                 <input type='file' id='getval' name="background-image" />
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
@@ -32,9 +31,11 @@
                             <br>Use W and S to increase and decrease the score for team one.
                             <br>Use P and L to increase and decrease the score for team two.
                             <br>Press N to reset the points for both teams
-                            <br>Press T to change theme (dark/light).
                             <br>Press F for fullscreen.
                             <br>Press H for help.
+                            <hr>Press T to change from light to dark layout.
+                            <br>Press 1 for Football theme.
+                            <br>Press 2 for Grab the Mic theme.
                         </div>
                 </div>
 
@@ -43,13 +44,13 @@
                         <div  class="score">
                             <h1 class="lag1 theme">0</h1>
                         </div>
-                        <h1 class="c-team theme">TEAM 1</h1>
+                        <h1 class="c-team theme" id="team1">TEAM 1</h1>
                     </div>
                     <div class="col-6">
                         <div class="score">
                             <h1 class="lag2 theme">0</h1>
                         </div>
-                        <h1 class="c-team theme">TEAM 2</h1>
+                        <h1 class="c-team theme" id="team2">TEAM 2</h1>
                     </div>
         
                 </div>

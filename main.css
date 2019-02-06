@@ -2,13 +2,13 @@
     background: linear-gradient(#414141, #383838);    height: 100vh;
 }
 .score > h1 {
-    font-size: 30em;
+    font-size: 40em;
 }
 .theme {
     color: #fff;
 }
 .c-team {
-    margin-top: -50px;
+    margin-top: -100px;
 }
 
 .score-row {
