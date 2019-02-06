@@ -8,5 +8,4 @@
 - Press **F** to view in fullscreen.
 
 
-**Live demo**
-Visit [hakon.app](https://hakon.app/score/) for live demo
+Visit [hakon.app](https://hakon.app/score/) for demo.
