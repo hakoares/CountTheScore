@@ -1,6 +1,7 @@
 # CountTheScore
 ### Web application for counting score
-Keep count, full screen web application, two teams, event
+Keep count, full screen web application, two teams, event.
+
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fhakoares%2FCountTheScore)
 
 **How to use Count The Score**
