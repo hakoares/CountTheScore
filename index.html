@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
 </head>
 <body>
@@ -15,16 +15,26 @@
         <div id="background-img">
             <div class="container-full">
                 <div class="zindex">
-                    <div class="alert alert-warning alert-dismissible">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Count The Score!</strong> Bruk "W" og "S" til å gi poeng til lag 1 og "P" og "L" for å gi poeng til lag 2. 
-                        Trykk "N" for å tilbakestille poengene. Trykk "F" for fullskjerm.
-                    </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Last opp bakgrunnsbilde</strong> 
-                        <input type='file' id='getval' name="background-image" />
-                    </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Count The Score!</strong> 
+                                Press H for help.
+                                <hr>
+                                <strong>Choose background image</strong> 
+                                <button type="button" id="gtm" class="btn-small ml-3 mr-3 btn-gray ">Grab the mic</button>
+                                <input type='file' id='getval' name="background-image" />
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+
+                        <div class="alert alert-success" id="help-alert">
+                            <strong>HELP</strong>
+                            <br>Use W and S to increase and decrease the score for team one.
+                            <br>Use P and L to increase and decrease the score for team two.
+                            <br>Press N to reset the points for both teams
+                            <br>Press F for fullscreen.
+                            <br>Press H for help.
+                        </div>
                 </div>
 
                 <div class="row mx-auto text-center c-height vertical-align">

@@ -2,6 +2,7 @@ $(function(){
     var lag1 = 0;
     var lag2 = 0;
     var isFullscreen = false;
+    var isHelp = false;
 
 
     $(document).keypress(function(e) {
@@ -29,7 +30,19 @@ $(function(){
           if(e.which == 110 || e.which == 78) {
             lag1 = 0;
             lag2 = 0;
+
         }
+
+         // show help: H
+         if(e.which == 104 || e.which == 72) {
+          if(isHelp == true) {
+            document.getElementById('help-alert').style.display = "none";
+            isHelp = false;
+          } else if(isHelp == false) {
+            showHelp();
+            isHelp = true;
+          }
+      }
     
         // Go fullscreen
         if(e.which == 102 || e.which == 70) {
@@ -40,13 +53,26 @@ $(function(){
             exitPromise = document.exitFullscreen();
             isFullscreen = false;
           }
-          
+
         }
 
           // Update score after key input
           $(".lag1").html(lag1);
           $(".lag2").html(lag2);
 
+
+      });
+
+
+      
+      function showHelp() {
+        document.getElementById('help-alert').style.display = "block";
+          
+      }
+
+      // Background img for GTM
+      $('#gtm').click(function(){
+        document.getElementById('background-img').style.backgroundImage = "url(img/gtm.jpg)";        
 
       });
 

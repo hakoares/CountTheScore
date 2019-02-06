@@ -39,3 +39,7 @@
     background-position: center center; 
     
 }
+
+#help-alert {
+    display: none;
+}
