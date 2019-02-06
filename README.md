@@ -1,6 +1,6 @@
 # CountTheScore
 ### Web application for counting score
-Keep count, full screen web application, two teams, event.
+Tags: Keep count, full screen web application, two teams, event, custom background image.
 
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fhakoares%2FCountTheScore)
 
