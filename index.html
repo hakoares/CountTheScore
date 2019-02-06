@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Count The Score</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+</head>
+<body>
+    <div class="c-background" >
+        <div id="background-img">
+            <div class="container-full">
+                <div class="zindex">
+                    <div class="alert alert-warning alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Count The Score!</strong> Bruk "W" og "S" til å gi poeng til lag 1 og "P" og "L" for å gi poeng til lag 2. 
+                        Trykk "N" for å tilbakestille poengene. Trykk "F" for fullskjerm.
+                    </div>
+                    <div class="alert alert-warning alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Last opp bakgrunnsbilde</strong> 
+                        <input type='file' id='getval' name="background-image" />
+                    </div>
+                </div>
+
+                <div class="row mx-auto text-center c-height vertical-align">
+                    <div class="col-6">
+                        <div class="score">
+                            <h1 class="lag1">0</h1>
+                        </div>
+                        <h1 class="c-team">TEAM 1</h1>
+                    </div>
+                    <div class="col-6">
+                        <div class="score">
+                            <h1 class="lag2">0</h1>
+                        </div>
+                        <h1 class="c-team">TEAM 2</h1>
+                    </div>
+        
+                </div>
+            </div>
+    </div>
+            
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
+</html>

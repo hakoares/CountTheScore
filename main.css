@@ -1,0 +1,41 @@
+.c-background {
+    background: linear-gradient(#414141, #383838);    height: 100vh;
+}
+.score > h1 {
+    font-size: 30em;
+    color: #fff;
+}
+.c-team {
+    color: #fff;
+    margin-top: -50px;
+}
+
+.score-row {
+    padding-top: 20vh;
+}
+
+.c-height {
+    height: 90vh;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.zindex {
+    position: absolute;
+    top: 10px; 
+    left:2%;
+    width: 96%;
+    z-index: 3;
+}
+
+#background-img {
+    width: auto;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    
+}
