@@ -9,4 +9,4 @@
 
 
 **Live demo**
-Visit[hakon.app](https://hakon.app/score/) for live demo
+Visit [hakon.app](https://hakon.app/score/) for live demo
