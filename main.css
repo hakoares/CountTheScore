@@ -3,10 +3,11 @@
 }
 .score > h1 {
     font-size: 30em;
+}
+.theme {
     color: #fff;
 }
 .c-team {
-    color: #fff;
     margin-top: -50px;
 }
 

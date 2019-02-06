@@ -3,6 +3,7 @@ $(function(){
     var lag2 = 0;
     var isFullscreen = false;
     var isHelp = false;
+    var themeDefault = true;
 
 
     $(document).keypress(function(e) {
@@ -43,6 +44,21 @@ $(function(){
             isHelp = true;
           }
       }
+
+      // Change theme: T
+      if(e.which == 84 || e.which == 116) {
+        if(themeDefault == true) {
+          goDark();
+          themeDefault = false;
+
+        } else if(themeDefault == false) {
+            goLight();
+            themeDefault = true;
+          }
+
+
+        }
+    
     
         // Go fullscreen
         if(e.which == 102 || e.which == 70) {
@@ -64,6 +80,20 @@ $(function(){
       });
 
 
+      function goDark() {
+        var x = document.getElementsByClassName("theme");
+        var i;
+          for (i = 0; i < x.length; i++) {
+            x[i].style.color = "#151515";
+          }
+      }
+      function goLight() {
+        var x = document.getElementsByClassName("theme");
+        var i;
+          for (i = 0; i < x.length; i++) {
+            x[i].style.color = "#fff";
+          }
+      }
       
       function showHelp() {
         document.getElementById('help-alert').style.display = "block";
