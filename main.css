@@ -1,5 +1,6 @@
 .c-background {
-    background: linear-gradient(#414141, #383838);    height: 100vh;
+    background: linear-gradient(#000, #000);    
+    height: 100vh;
 }
 .score > h1 {
     font-size: 40em;
@@ -9,6 +10,14 @@
 }
 .c-team {
     margin-top: -100px;
+}
+
+.c-title {
+    font-size: 1.5em;
+}
+
+.c-choose {
+    font-size: 0.9em;
 }
 
 .score-row {

@@ -67,7 +67,7 @@ $(function(){
          // Change theme: 2
       if(e.which == 50) {
         document.getElementById('background-img').style.backgroundImage = "url(img/gtm.jpg)";
-        document.getElementById('team1').innerHTML = "TEAM A";        
+        document.getElementById('team1').innerHTML = "TEAM 1";        
         document.getElementById('team2').innerHTML = "TEAM 2";  
         }
     
@@ -137,8 +137,9 @@ $(function(){
       
     
     document.getElementById('getval').addEventListener('change', readURL, true);
+
     function readURL(){
-       var file = document.getElementById("getval").files[0];
+       var file = document.getElementById('getval').files[0];
        var reader = new FileReader();
        reader.onloadend = function(){
           document.getElementById('background-img').style.backgroundImage = "url(" + reader.result + ")";        
@@ -148,6 +149,7 @@ $(function(){
         }else{
         }
     }
+    
     
 
     

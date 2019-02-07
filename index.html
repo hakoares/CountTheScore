@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Count The Score</title>
+    <title>CountTheScore: an online scoreboard app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -15,20 +15,18 @@
         <div id="background-img">
             <div class="container-full">
                 <div class="zindex">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong>Count The Score!</strong> 
-                                Press H for help.
-                                <hr>
-                                <strong>Choose background image</strong> 
-                                <input type='file' id='getval' name="background-image" />
+                        <div class="alert alert-light alert-dismissible fade show" role="alert">
+                                <strong class="c-title">CountTheScore: an online scoreboard app</strong>
+                                 - Press H for help and settings.                                
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                                 </button>
                         </div>
 
-                        <div class="alert alert-success" id="help-alert">
-                            <strong>HELP</strong>
-                            <br>Use W and S to increase and decrease the score for team one.
+                        <div class="alert alert-light" id="help-alert">
+                            <h4><strong>Settings</strong></h4>
+                            
+                            Use W and S to increase and decrease the score for team one.
                             <br>Use P and L to increase and decrease the score for team two.
                             <br>Press N to reset the points for both teams
                             <br>Press F for fullscreen.
@@ -36,6 +34,10 @@
                             <hr>Press T to change from light to dark layout.
                             <br>Press 1 for Football theme.
                             <br>Press 2 for Grab the Mic theme.
+                            <hr>
+                            <div class="c-choose">Upload background image 
+                                <input type='file' id='getval' name="background-image" />
+                            </div>
                         </div>
                 </div>
 
