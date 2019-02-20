@@ -1,9 +1,26 @@
+* {
+    border-radius: 0 !important;
+    
+  }
+
 .c-background {
-    background: linear-gradient(#000, #000);    
+    /*background: linear-gradient(#000, #000);*/
+    background-color: rgb(122, 197, 187);
     height: 100vh;
 }
+
+@media only screen and (max-width: 768px) { 
+    /* For mobile phones: */
+    .score > h1 {
+        font-size: 15em !important;
+    }
+    .c-team {
+        margin-top: -50px !important;
+    }
+  }
+
 .score > h1 {
-    font-size: 40em;
+    font-size: 30em;
 }
 .theme {
     color: #fff;
@@ -27,6 +44,7 @@
 .c-height {
     height: 90vh;
 }
+
 
 .vertical-align {
     display: flex;
@@ -52,4 +70,15 @@
 
 #help-alert {
     display: none;
+}
+
+.developedby {
+    font-size: 0.7em;
+}
+
+
+/** Intro **/
+
+.intro {
+    background-color: red;
 }

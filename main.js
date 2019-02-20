@@ -5,6 +5,14 @@ $(function(){
     var isHelp = false;
     var themeDefault = true;
 
+    // Increace score team 1
+    function touchTeam1() {
+      console.log("Touch!");
+      lag1 = lag1 + 1;
+      // Update score after key input
+      $(".lag1").html(lag1);
+    } 
+
 
     $(document).keypress(function(e) {
         // Increace score team 1
@@ -70,6 +78,13 @@ $(function(){
         document.getElementById('team1').innerHTML = "TEAM 1";        
         document.getElementById('team2').innerHTML = "TEAM 2";  
         }
+        
+      // Change background to black
+      if(e.which == 66 || e.which == 98) {
+        document.getElementById('background-img').style.backgroundColor = "rgb(0,0,0)";
+        document.getElementById('background-img').style.backgroundImage = "none";
+
+      }
     
         // Go fullscreen
         if(e.which == 102 || e.which == 70) {
@@ -90,6 +105,13 @@ $(function(){
 
       });
 
+      $(".start").click(function(){
+        $(".intro").toggle();
+        var x = document.getElementsByClassName("scoreboard");
+        x[1].style.display = "none";
+        
+
+      });
 
       function goDark() {
         var x = document.getElementsByClassName("theme");
@@ -105,6 +127,8 @@ $(function(){
             x[i].style.color = "#fff";
           }
       }
+
+  
       
       function showHelp() {
         document.getElementById('help-alert').style.display = "block";
