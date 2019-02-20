@@ -1,109 +1,103 @@
+
+
 $(function(){
     var lag1 = 0;
     var lag2 = 0;
     var isFullscreen = false;
-    var isHelp = false;
     var themeDefault = true;
 
-    // Increace score team 1
-    function touchTeam1() {
-      console.log("Touch!");
-      lag1 = lag1 + 1;
-      // Update score after key input
-      $(".lag1").html(lag1);
-    } 
+
+    // Start shortcuts when start button gets clicked.
 
 
-    $(document).keypress(function(e) {
-        // Increace score team 1
-        if(e.which == 119 || e.which == 87) {
-          lag1 = lag1 + 1;
-        } 
-
-        // Decrease score team 1
-        if(e.which == 83 || e.which == 115) {
-            lag1 = lag1 - 1;
-
-        }
-        // Increace score team 1
-        if(e.which == 112 || e.which == 80) {
-            lag2 = lag2 + 1;
-
+          $(document).keypress(function(e) {
+          // Increace score team 1
+          if(e.which == 119 || e.which == 87) {
+            lag1 = lag1 + 1;
           } 
+
           // Decrease score team 1
-          if(e.which == 108 || e.which == 76) {
-              lag2 = lag2 - 1;
+          if(e.which == 83 || e.which == 115) {
+              lag1 = lag1 - 1;
 
           }
-          // Reset points
-          if(e.which == 110 || e.which == 78) {
-            lag1 = 0;
-            lag2 = 0;
+          // Increace score team 1
+          if(e.which == 112 || e.which == 80) {
+              lag2 = lag2 + 1;
 
-        }
+            } 
+            // Decrease score team 1
+            if(e.which == 108 || e.which == 76) {
+                lag2 = lag2 - 1;
 
-         // show help: H
-         if(e.which == 104 || e.which == 72) {
-          if(isHelp == true) {
-            document.getElementById('help-alert').style.display = "none";
-            isHelp = false;
-          } else if(isHelp == false) {
+            }
+            // Reset points
+            if(e.which == 110 || e.which == 78) {
+              lag1 = 0;
+              lag2 = 0;
+
+          }
+
+          // show help: H
+          if(e.which == 104 || e.which == 72 ) {
             showHelp();
-            isHelp = true;
+        }
+
+        // Change theme: T
+        if(e.which == 84 || e.which == 116) {
+          if(themeDefault == true) {
+            goDark();
+            themeDefault = false;
+
+          } else if(themeDefault == false) {
+              goLight();
+              themeDefault = true;
+            }
           }
-      }
-
-      // Change theme: T
-      if(e.which == 84 || e.which == 116) {
-        if(themeDefault == true) {
-          goDark();
-          themeDefault = false;
-
-        } else if(themeDefault == false) {
-            goLight();
-            themeDefault = true;
-          }
-        }
-    
-        // Change theme: 1
-      if(e.which == 49) {
-        document.getElementById('team1').innerHTML = "HOME";        
-        document.getElementById('team2').innerHTML = "AWAY";        
-        document.getElementById('background-img').style.backgroundImage = "url(img/foot.jpg)";
-        }
-
-         // Change theme: 2
-      if(e.which == 50) {
-        document.getElementById('background-img').style.backgroundImage = "url(img/gtm.jpg)";
-        document.getElementById('team1').innerHTML = "TEAM 1";        
-        document.getElementById('team2').innerHTML = "TEAM 2";  
-        }
-        
-      // Change background to black
-      if(e.which == 66 || e.which == 98) {
-        document.getElementById('background-img').style.backgroundColor = "rgb(0,0,0)";
-        document.getElementById('background-img').style.backgroundImage = "none";
-
-      }
-    
-        // Go fullscreen
-        if(e.which == 102 || e.which == 70) {
-          if(isFullscreen == false) {
-            go_full_screen();
-            isFullscreen = true;
-          } else if(isFullscreen == true) {
-            exitPromise = document.exitFullscreen();
-            isFullscreen = false;
+      
+          // Change theme: 1
+        if(e.which == 49) {
+          document.getElementById('team1').innerHTML = "HOME";        
+          document.getElementById('team2').innerHTML = "AWAY";        
+          document.getElementById('background-img').style.backgroundImage = "url(img/foot.jpg)";
           }
 
+          // Change theme: 2
+        if(e.which == 50) {
+          document.getElementById('background-img').style.backgroundImage = "url(img/gtm.jpg)";
+          document.getElementById('team1').innerHTML = "TEAM 1";        
+          document.getElementById('team2').innerHTML = "TEAM 2";  
+          }
+          
+        // Change background to black
+        if(e.which == 66 || e.which == 98) {
+          document.getElementById('background-img').style.backgroundColor = "rgb(0,0,0)";
+          document.getElementById('background-img').style.backgroundImage = "none";
+
         }
+      
+          // Go fullscreen
+          if(e.which == 102 || e.which == 70) {
+            if(isFullscreen == false) {
+              go_full_screen();
+              isFullscreen = true;
+            } else if(isFullscreen == true) {
+              exitPromise = document.exitFullscreen();
+              isFullscreen = false;
+            }
 
-          // Update score after key input
-          $(".lag1").html(lag1);
-          $(".lag2").html(lag2);
+          }
+
+            // Update score after key input
+            $(".lag1").html(lag1);
+            $(".lag2").html(lag2);
 
 
-      });
+        });
+
+
+   
+      
 
       $(".start").click(function(){
         $(".intro").toggle();
@@ -130,10 +124,7 @@ $(function(){
 
   
       
-      function showHelp() {
-        document.getElementById('help-alert').style.display = "block";
-          
-      }
+      
 
       // Show/hide the mouse
       $(document).mousemove(function(){
@@ -159,20 +150,36 @@ $(function(){
         }
     }
       
-    
-    document.getElementById('getval').addEventListener('change', readURL, true);
+      document.getElementById('getval').addEventListener('change', readURL, true);
 
-    function readURL(){
-       var file = document.getElementById('getval').files[0];
-       var reader = new FileReader();
-       reader.onloadend = function(){
-          document.getElementById('background-img').style.backgroundImage = "url(" + reader.result + ")";        
-       }
-       if(file){
-          reader.readAsDataURL(file);
-        }else{
+      function readURL(){
+        var file = document.getElementById('getval').files[0];
+        var reader = new FileReader();
+        reader.onloadend = function(){
+            document.getElementById('background-img').style.backgroundImage = "url(" + reader.result + ")";        
         }
-    }
+        if(file){
+            reader.readAsDataURL(file);
+          } else {
+          }
+      }
+    
+
+      var lag1touch = document.getElementById("lag1touch");
+      var lag2touch = document.getElementById("lag2touch");
+
+      lag1touch.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        lag1 = lag1 + 1;
+        $(".lag1").html(lag1);
+      }, false);  
+
+
+      lag2touch.addEventListener('touchstart', function(e){
+        e.preventDefault();
+        lag2 = lag2 + 1;
+        $(".lag2").html(lag2);
+      },false);
     
     
 
@@ -184,3 +191,15 @@ $(function(){
         
     
 });
+
+var isHelp = false;
+
+function showHelp() {
+  if(isHelp == true) {
+    document.getElementById('help-alert').style.display = "none";
+    isHelp = false;
+  } else if(isHelp == false) {
+    document.getElementById('help-alert').style.display = "block";
+    isHelp = true;
+  }
+}
