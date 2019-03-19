@@ -6,33 +6,39 @@ $(function(){
     var isFullscreen = false;
     var themeDefault = true;
 
-
     // Start shortcuts when start button gets clicked.
 
 
           $(document).keypress(function(e) {
           // Increace score team 1
           if(e.which == 119 || e.which == 87) {
-            lag1 = lag1 + 1;
+            animateCSS(".lag1","pulse");
+            lag1 = lag1 + 10;
           } 
 
           // Decrease score team 1
           if(e.which == 83 || e.which == 115) {
+            animateCSS(".lag1","shake");
               lag1 = lag1 - 1;
 
           }
-          // Increace score team 1
+          // Increace score team 2
           if(e.which == 112 || e.which == 80) {
+            animateCSS(".lag2","pulse");
+
               lag2 = lag2 + 1;
 
             } 
             // Decrease score team 1
             if(e.which == 108 || e.which == 76) {
+              animateCSS(".lag2","shake");
                 lag2 = lag2 - 1;
 
             }
             // Reset points
             if(e.which == 110 || e.which == 78) {
+              animateCSS(".lag1","swing");
+              animateCSS(".lag2","swing", "delay-ms");
               lag1 = 0;
               lag2 = 0;
 
@@ -88,14 +94,47 @@ $(function(){
 
           }
 
+          // Announce winner
+          if(e.which == 121 || e.which == 89) {
+            if( lag1 < lag2){
+              // remove other team
+              const lag2a =  document.querySelector('.lag2')
+              lag2a.classList.add('animated', 'flash', 'infinite')
+
+
+            } else if(lag1 > lag2) {
+              // remove other team
+              const lag1a =  document.querySelector('.lag1')
+              lag1a.classList.add('animated', 'flash', 'infinite')
+            } else {
+              console.log("uavgjort");
+            }
+
+
+          }
+
             // Update score after key input
             $(".lag1").html(lag1);
             $(".lag2").html(lag2);
-
+        
 
         });
 
+        //ANIMATION
+        function animateCSS(element, animationName, speed) {
+          const node = document.querySelector(element)
+          node.classList.add('animated', animationName)
+          node.classList.add('animated', speed)
 
+          function handleAnimationEnd() {
+              node.classList.remove('animated', animationName)
+              node.classList.remove('animated', speed)
+
+              node.removeEventListener('animationend', handleAnimationEnd)  
+          }
+          node.addEventListener('animationend', handleAnimationEnd)
+      }
+      
    
       
 
@@ -122,7 +161,7 @@ $(function(){
           }
       }
 
-  
+      
       
       
 

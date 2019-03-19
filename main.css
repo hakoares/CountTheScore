@@ -1,6 +1,6 @@
 * {
     border-radius: 0 !important;
-    
+
   }
 
 .c-background {
@@ -19,13 +19,28 @@
     }
   }
 
+  @media only screen and (max-width: 2000px) { 
+    /* For smaller screens: */
+    .score > h1 {
+        font-size: 25em !important;
+    }
+    .c-team {
+        margin-top: -50px !important;
+    }
+  }
+
+
+
 .score > h1 {
     font-size: 30em;
+    font-family: 'Roboto', sans-serif;
+
 }
 .theme {
     color: #fff;
 }
 .c-team {
+    font-family: 'Roboto', sans-serif;
     margin-top: -100px;
 }
 
@@ -76,9 +91,3 @@
     font-size: 0.7em;
 }
 
-
-/** Intro **/
-
-.intro {
-    background-color: red;
-}
