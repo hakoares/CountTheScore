@@ -14,7 +14,7 @@ Tags: Keep count, full screen web application, two teams, event, custom backgrou
 - Press **H** for help.
 
 
-Visit [hakon.app](https://hakon.app/score/) for demo.
+Visit [hakon.app](https://hakon.app/) for demo.
 
 
 
